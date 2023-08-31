@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: rgb(236, 236, 236);
+  height: 100vh;
+  width: 100vw;
+}
+
+.Usuario {
+  display: flex;
+}
+
+.formUsuario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+form {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.visualizaUsuarios {
+  width: 80%;
+  // background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.usuario {
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  p {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+.Emprego {
+  display: flex;
+}
+
+.formEmprego {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.visualizaEmpregos {
+  width: 80%;
+  // background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.emprego {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  p {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
