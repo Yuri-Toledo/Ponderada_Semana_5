@@ -11,6 +11,7 @@
 
 .Usuario {
   display: flex;
+  height: 50%;
 }
 
 .formUsuario {
@@ -60,6 +61,7 @@ form {
 
 .Emprego {
   display: flex;
+  height: 40%;
 }
 
 .formEmprego {
@@ -97,4 +99,9 @@ form {
     margin-left: 5%;
     margin-right: 5%;
   }
+}
+
+.disponivel {
+  display: flex;
+  justify-content: space-between;
 }

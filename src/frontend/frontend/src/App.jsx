@@ -14,6 +14,7 @@ function App() {
   const [enviouEmprego, setEnviouEmprego] = useState(false);
   const [descricao, setDescricao] = useState('');
   const [salario, setSalario] = useState('');
+  const [disponibilidade, setDisponibilidade] = useState(true)
 
   const [empregos, setEmpregos] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
@@ -85,6 +86,7 @@ function App() {
         email: email,
         senha: senha,
         nome: nome,
+        disponivel: disponibilidade,
         idade: intIdade
       }
   
@@ -102,6 +104,7 @@ function App() {
       setSenha('')
       setNome('')
       setIdade('')
+      setDisponibilidade(true)
 
     }
 
@@ -122,6 +125,10 @@ function App() {
             <input type="password" placeholder='Senha' value={senha} onChange={(e) => setSenha(e.target.value)} />
             <input type="text" placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
             <input type="number" placeholder='Idade' value={idade} onChange={(e) => setIdade(e.target.value)} />
+            <div className={styles.disponivel}>
+              <input type="checkbox" checked={disponibilidade} onChange={(e) => setDisponibilidade(e.target.checked)} />
+              <p>Disponível</p>
+            </div>
           
             <button type='submit'>Confirmar</button>
           </form>
@@ -138,6 +145,8 @@ function App() {
               <p>Nome: {usuario.nome}</p>
               <br />
               <p>Idade: {usuario.idade}</p>
+              <br />
+              <p>Disponibilidade: {usuario.disponivel}</p>
             </div>
         
           ))}
@@ -167,7 +176,7 @@ function App() {
 
             <div className={styles.emprego}>
               <p>Descrição: {emprego.descricao}</p>
-              <p>Salário:{emprego.salario}</p>
+              <p>Salário: {emprego.salario}</p>
             </div>
           )
           )}
