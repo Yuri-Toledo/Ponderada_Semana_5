@@ -21,7 +21,11 @@ export class EmpregoRepository {
 
     async create(emprego: CriaEmpregoDto): Promise<Emprego> {
       const { descricao, salario } = emprego;
-      const result = await this.prisma.$executeRaw`INSERT INTO "Emprego" ("descricao", "salario") VALUES (${descricao}, ${salario}) RETURNING *`;
+      console.log(descricao)
+      console.log(salario)
+      console.log(`INSERT INTO "Emprego" ("descricao", "salario") VALUES (${descricao}, ${salario}) RETURNING *`)
+      // const result =  await this.prisma.$executeRaw`INSERT INTO "Emprego" ("descricao", "salario") VALUES (${descricao}, ${salario}) RETURNING *`;
+      const result =  await this.prisma.$executeRaw`INSERT INTO "Emprego" ("descricao", "salario") VALUES (${descricao}, ${salario}) RETURNING *`;
       return result[0];
 
     } 

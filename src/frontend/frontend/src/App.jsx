@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     
 
-      fetch('http://127.0.0.1:3000/usuario')
+      fetch('http://127.0.0.1:3001/usuario')
       .then((response) => response.json())
       .then((data) => {
         setUsuarios(data)
@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     
 
-      fetch('http://127.0.0.1:3000/emprego')
+      fetch('http://127.0.0.1:3001/emprego')
       .then((response) => response.json())
       .then((data) => {
         setEmpregos(data)
@@ -61,7 +61,7 @@ function App() {
         salario: intSalario
       }
 
-      fetch('http://127.0.0.1:3000/emprego', {
+      fetch('http://127.0.0.1:3001/emprego', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ function App() {
         idade: intIdade
       }
   
-      fetch('http://127.0.0.1:3000/usuario', {
+      fetch('http://127.0.0.1:3001/usuario', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

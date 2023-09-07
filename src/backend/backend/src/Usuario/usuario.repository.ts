@@ -21,6 +21,7 @@ export class UsuarioRepository {
 
     async create(usuario: CriaUsuarioDto): Promise<Usuario> {
       const { email, senha, nome, disponivel, idade } = usuario;
+      console.log(`INSERT INTO "Usuario" ("email", "senha", "nome", "disponivel", "idade") VALUES (${email}, ${senha}, ${nome}, ${disponivel}, ${idade}) RETURNING *`)
       const result = await this.prisma.$executeRaw`INSERT INTO "Usuario" ("email", "senha", "nome", "disponivel", "idade") VALUES (${email}, ${senha}, ${nome}, ${disponivel}, ${idade}) RETURNING *`;
       return result[0];
 
